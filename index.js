@@ -11,10 +11,11 @@ function copyJson(){
 function clearJson(){
     const ele = document.getElementById('json-result')
     if(ele.value === ''){
-        notifyModalShow('Nothing to clear!',1000)
+        notifyModalShow('Nothing to clear!',1000);
     }else{
         ele.value = "";
-        notifyModalShow('Cleared Data',1000)
+        notifyModalShow('Cleared Data',1000);
+        document.getElementById("result-wrapper").classList.remove('active');
     }
 }
 
