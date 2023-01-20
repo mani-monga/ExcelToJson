@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Excel to JSON | Javacodepoint</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+   
+</head>
+  <body>
+        <div class="socialLinks">
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/mani-monga" target="_blank" rel="noopener noreferrer">mani-monga</a>
+            <a href="https://portfolio-mani.web.app/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        </div>
+        <div class="notifyModal">
+            <div id="notifyModalText"></div>
+            <button id="notifyModalClose" onclick="hideModal()">Close</button>
+        </div>
+        <div class="container-flex">
+            <div class="upload-section">
+                <h1>Excel TO JSON Converter</h1>
+                <button onclick="inputBtnClick()" id="inputBtn">
+                    <i class="fa-solid fa-file"></i>
+                    File Upload
+                </button>
+                <input type="file" id="file_upload" />
+                <button onclick="upload()" id="convertBtn">
+                    Convert
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+            <div class="json-result-wrapper" id="result-wrapper">
+                <div class="iconGrp">
+                    <i class="fa-solid fa-copy" onclick="copyJson()"></i>
+                    <i class="fa-solid fa-trash" onclick="clearJson()"></i>
+                </div>
+                <h4>JSON</h4>
+                <textarea id="json-result"></textarea>
+            </div>
+        </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
